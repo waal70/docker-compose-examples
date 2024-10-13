@@ -1,27 +1,14 @@
-<div align="center" width="100%">
-    <h1>Awesome Docker Compose Examples</h1>
-    <p>Various Docker Compose examples of selfhosted FOSS and proprietary projects.</p>
-    <a target="_blank" href="https://github.com/docker/compose"><img src="https://badgen.net/badge/icon/docker%20compose?icon=docker&label" /></a>
-    <a target="_blank" href="https://www.reddit.com/r/selfhosted"><img src="https://badgen.net/badge/icon/r%2fselfhosted?icon=reddit&label&color=red" /></a><p>
-    <!--<a target="_blank" href="#"><img src="https://ForTheBadge.com/images/badges/makes-people-smile.svg" /></a><br>-->
-    <a target="_blank" href="https://github.com/Haxxnet/Compose-Examples/stargazers"><img src="https://img.shields.io/github/stars/Haxxnet/Compose-Examples.svg?style=social&label=Star" /></a>
-    <a target="_blank" href="https://github.com/Haxxnet/Compose-Examples/network/members"><img src="https://img.shields.io/github/forks/Haxxnet/Compose-Examples.svg?style=social&label=Fork" /></a>
-    <a target="_blank" href="https://github.com/Haxxnet/Compose-Examples/watchers"><img src="https://img.shields.io/github/watchers/Haxxnet/Compose-Examples.svg?style=social&label=Watch" /></a><p>
-       <a target="_blank" href="https://github.com/Haxxnet/Compose-Examples/tree/main/examples"><img src="https://img.shields.io/github/directory-file-count/Haxxnet/Compose-Examples/examples?label=Compose%20Examples&style=for-the-badge.svg" /></a><br>
-    <a target="_blank" href="https://github.com/l4rm4nd"><img src="https://img.shields.io/badge/maintainer-LRVT-orange" /></a>
-    <a target="_blank" href="https://GitHub.com/Haxxnet/Compose-Examples/graphs/contributors/"><img src="https://img.shields.io/github/contributors/Haxxnet/Compose-Examples.svg" /></a>
-    <a target="_blank" href="https://github.com/Haxxnet/Compose-Examples/actions"><img src="https://github.com/Haxxnet/Compose-Examples/actions/workflows/validator.yml/badge.svg" /></a><br>
-    <a target="_blank" href="https://github.com/Haxxnet/Compose-Examples/issues/new/choose"><img src="https://img.shields.io/badge/PRs+Issues-welcome-brightgreen.svg?style=flat-square" /></a>
-    <a target="_blank" href="https://GitHub.com/Haxxnet/Compose-Examples/commits/"><img src="https://img.shields.io/github/last-commit/Haxxnet/Compose-Examples.svg" /></a>
-    <a target="_blank" href="https://GitHub.com/Haxxnet/Compose-Examples/issues/"><img src="https://img.shields.io/github/issues/Haxxnet/Compose-Examples.svg" /></a>
-    <a target="_blank" href="https://github.com/Haxxnet/Compose-Examples/issues?q=is%3Aissue+is%3Aclosed"><img src="https://img.shields.io/github/issues-closed/Haxxnet/Compose-Examples.svg" /></a><p>
-    <a href="https://www.buymeacoffee.com/LRVT" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
-</div>
+
+# Awesome Docker Compose Examples
+
+Various Docker Compose examples of selfhosted FOSS and proprietary projects.
 
 ## ✨ Requirements
+
 - Docker Compose
 
 ## 🎓 Usage
+
 - Volume bind mounts are assumed to be located at `/mnt/docker-volumes/<container-name>/`. You can adjust the path via the global env variable `DOCKER_VOLUME_STORAGE` to your liking though. The compose examples will fall back to `/mnt/docker-volumes/<container-name>/` if the env variable is not set on your Docker server.
 - Volume permissions (UID:GUID) must be set correctly by yourself. Usually `1000:1000` - otherwise read the notes!
 - Docker networks are not pre-defined. Adjust to your preference and network/proxy setup.
@@ -29,16 +16,18 @@
 - Example credentials should always be adjusted due to security reasons. May put them in a separate `.env` file or platform for secrets management.
 
 Otherwise, it should be a matter of:
-````
+
+````bash
+
 git clone https://github.com/Haxxnet/Compose-Examples && cd Compose-Examples
 cd <container-of-interest>
 
 # read the notes, comments and adjust compose + volumes + configs
 docker compose up
 ````
+
 > [!TIP]  
 > You can find an online web version of this GitHub repository [here](https://haxxnet.github.io/Compose-Examples/).
-
 > [!CAUTION]
 > The samples are intended for local development environments such as project setups, tinkering with software stacks, etc. These samples may be deployed in production environments or exposed to the Internet but please adhere to general hardening and security guidelines. Adjust all default credentials, use a separate `.env` file or platform for secret management, implement a backup process and have a tested disaster recovery plan. Use a reverse proxy to stream-line your web service exposure and provide an encrypted HTTPS communication channel with trusted SSL certificates.
 
@@ -292,7 +281,7 @@ A [pastebin](https://en.wikipedia.org/wiki/Pastebin) is a type of online content
 
 ### Backups
 
-**[`^        back to top        ^`](#awesome-sysadmin)**
+**[`^        back to top        ^`](#awesome-docker-compose-examples)**
 
 [Backup](https://en.wikipedia.org/wiki/Backup) software.
 
@@ -450,12 +439,5 @@ Software that does not fit in another section.
 - [IT-Tools](examples/it-tools) - Collection of handy online tools for developers, with great UX.
 
 ## 🌟 Star History
+
 [![Star History Chart](https://api.star-history.com/svg?repos=Haxxnet/Compose-Examples&type=Date)](https://star-history.com/#Haxxnet/Compose-Examples&Date)
-
-## 🧑‍🤝‍🧑 Join the Community!
-
-Many thanks to all contributors that help maintaining and improving this repo:
-
-<a href="https://github.com/Haxxnet/Compose-Examples/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Haxxnet/Compose-Examples" />
-</a>
